@@ -1,0 +1,587 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Della+Respira&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: monospace;
+}
+html{
+    background-color: rgb(224, 224, 224);
+
+    scroll-behavior: smooth;
+}
+.frase{
+    padding: 40px;
+    margin: 0 auto;
+    text-align: start;
+    line-height: 27px;
+}
+
+cite{
+    color: rgb(78, 74, 69);
+    font-size: 20px;
+}
+/* NAVBAR */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly   ;
+    transition: all 0.7s;
+    padding: 20px 20px;
+}
+.logo{
+    text-decoration: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+}
+
+/* barrido */
+.abajo{
+    background-color: black;
+}
+.abajo .logo{
+    color: rgb(240, 239, 239);
+}
+header.abajo{
+    background-color: rgb(0, 0, 0);
+}
+header.abajo li a{
+    color: rgb(239, 239, 239);
+}
+header.abajo li a:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border-radius: 15px;
+}
+
+nav{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+header ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li{
+    list-style: none;
+}
+header ul li a{
+    color: rgb(0, 0, 0);
+    font-size: 19px;
+    font-weight: bold;
+    transition: all 0.5s ease; 
+    padding: 10px;   
+    border-radius: 15px;
+    font-size: 19px;
+    font-weight: bold;
+    color: rgb(14, 14, 14);
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: all 0.7s;
+}
+header ul li a:hover{
+    
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border-radius: 15px;
+}
+main{
+
+    margin-top: 150px;
+    padding: 20px;
+    background-color: rgb(224, 224, 224);
+}
+.burguer{
+    max-width: 20px;
+    display: none;
+    cursor: pointer;
+}
+
+@media ( max-width: 768px ){
+    header{
+        height: 150px;
+        background-color: #c07f7f;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+   header nav{
+        display: flex;
+        justify-content: space-between;
+    }
+    .nav{
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        background-color: #1d1d1d;
+        width: 25%;
+        top: 150px;
+        padding: 50px 0;
+        height: calc(100% - 150px);
+        overflow-y: auto;
+
+        transition: all 0.4s;
+        right: 100%;
+    }
+    .nav.visible{
+        right: 0;
+        display: block;
+    }
+     li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px 0;    
+    }
+    .nav li a{
+        font-size: 29px;
+        color: white;
+    }
+    .nav li a:hover{
+        color: rgb(94, 94, 120);
+    }
+
+    .toggle .visible{
+        transition: all 0.5s;
+        left: 20px;
+    }
+    .burguer{
+        max-width: 40px;
+        display: block;
+    }
+
+}
+
+
+/* SECTIONES */
+/* SOBRE MI  */
+#acercademi{
+    padding-top: 10px;
+}
+.container{
+    text-align: start;
+    margin-top: 100px;
+    margin-left: 10px;
+    background-image: linear-gradient(to left bottom, #fff51e, #ffd23c, #ffb35f, #ff9c7d, #ff8e95, #ff918f, #ff9489, #fe9783, #f5b06b, #d8cc68, #aae685, #5ffbbe);
+    width: 1200px;
+    height: auto;
+    border-radius: 10px;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+h3{
+    padding-top: 70px;
+    padding-left: 20px;
+    color: wheat;
+    font-size: 45px;
+    font-family: 'Bebas Neue', cursive;
+}
+p{
+    color: rgb(202, 225, 225);
+    font-size: 23px;
+}
+.parrafos{
+    text-align: start;
+    grid-column: 1/2;
+    margin-bottom: 70px;
+    text-align: start;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imagenpersonal{
+    grid-column: 2/2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imagenpersonal img{
+    border-radius: 10px;
+    margin-bottom: 50px;
+    max-width: 350px;
+    border-radius: 10px;
+    height: auto;
+}
+
+/* Conocimientos */
+#conocimientos{
+    text-align: left ;
+    padding-top: 20px;
+}
+#conocimientos h3{
+    font-size: 40px;
+    font-family: 'Bebas Neue', cursive;
+}
+.conocim{
+    
+    background-color: rgb(52, 45, 59);
+
+    border-radius: 10px; 
+    margin-top: 100px;
+    margin-left: 10px;
+    margin-right: 40px;
+}
+.galeria{
+    display: flex;
+    justify-content: center;
+}
+.imagenes{
+    text-align: center;
+}
+.imagenes img{
+    padding: 10px;
+    border-radius: 14px;
+    background-color:  #ecd2ee;
+    max-width: 100px;
+    margin: 20px;
+}
+.imagenes p{
+    font-family: 'Bebas Neue', cursive;
+    margin-bottom: 20px;
+    font-size: 29px;
+    color: white;
+}
+/* PROYECTOS */
+#proyectos{
+    padding-bottom:100px ;
+    padding-top:20px ;
+}
+.proyectos{
+    padding-top: 20px ;
+    margin-top: 100px;
+    margin-left: 10px;
+    margin-right: 40px;
+    border-radius: 10px;
+    background-color: #77987b;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.proyectos img{
+    border: 3px solid #9ec8a4;
+    border-radius: 12px;
+    width: 500px;
+    height: 300px;
+    margin: 50px;
+    cursor: pointer;
+}
+.transition{
+    transition: all 200ms;
+}
+.transition:hover{
+    width: 600px;
+    height: 320px;
+}
+.imagenUno{
+    grid-column: 1/2;
+    background-image: black;
+}
+.imagenUno a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+.imagenUno a:hover{
+    text-decoration: none;
+    color: rgb(59, 79, 100);
+    font-size: 20px;
+}
+.imagenDos{
+    grid-column: 2/2;
+}
+.imagenDos a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+.imagenDos a:hover{
+    text-decoration: none;
+    color: rgb(59, 79, 100);
+
+    font-size: 20px;
+}
+.imagenTres{
+    grid-column: 1/2;
+}
+.imagenTres a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+.imagenTres a:hover{
+    text-decoration: none;
+    color: rgb(59, 79, 100);
+    font-size: 20px;
+}
+.imagenCuatro{
+    grid-column: 2/2;
+}
+.imagenCuatro a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+.imagenCuatro a:hover{
+    text-decoration: none;
+    color: rgb(59, 79, 100);
+    font-size: 20px;
+}
+h4{
+    color: wheat;
+    font-size: 40px;
+    font-family: 'Bebas Neue', cursive; 
+    height: 20px;
+    padding-top: 20px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+#descripcion{
+    margin-left: 20px;
+    max-width: 500px;
+    display: flex;
+    justify-content:  center;
+    align-items: center;
+}
+#descripcion a{
+    margin-bottom: 100px;
+}
+/* FOOTER */
+footer{
+    background-color: #1d1d1d;
+}
+.contactoapps{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.contactoapps p{
+    font-weight: lighter;
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(200, 195, 195);
+}
+.contactoapps img{
+    max-width: 50px;
+}
+#logofooter{
+    max-width: 800px;
+}
+.aplicaciones{
+    display: grid;
+}
+.instagram{
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.linkedin{
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.linkedin p{
+    padding-left: 20px;
+}
+.github{
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.wpp{
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.gmail{
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media ( max-width: 1268px ){
+
+    .logo{
+        color:  #eda200;
+    }
+    header.abajo{
+        background-color: #edc600;
+    }
+    .abajo .logo{
+        color: #795c8d;
+    }
+    header{
+        height: 150px;
+        background-color: #628186;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+   header nav{
+        display: flex;
+        justify-content: space-between;
+    }
+    .nav{
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        background-color: #1d1d1d;
+        width: 25%;
+        top: 150px;
+        padding: 50px 0;
+        height: calc(100% - 150px);
+        overflow-y: auto;
+
+        transition: all 0.4s;
+        right: 100%;
+    }
+    .nav.visible{
+        right: 0;
+        display: block;
+    }
+     li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px 0;    
+    }
+    .nav li a{
+        font-size: 19px;
+        color: white;
+    }
+    .nav li a:hover{
+        color: rgb(94, 94, 120);
+    }
+
+    .toggle .visible{
+        transition: all 0.5s;
+        left: 20px;
+    }
+    .burguer{
+        max-width: 40px;
+        display: block;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+    }
+    .parrafos{
+        text-align: center;
+    }
+    .parrafos p{
+        font-size: 19px;
+    }
+    .imagenpersonal{
+        padding: 20px;
+    }
+    .conocim{
+        max-width: 100%;
+    }
+    .galeria{
+        max-width: 90%;
+        display: flex;
+        flex-flow: column wrap;
+    }
+    .imagenes{
+        margin: auto;
+        max-width: 100px;
+    }
+    
+    .imagenes p{
+        font-family: 'Bebas Neue', cursive;
+        margin-bottom: 90px;
+        font-size: 20px;
+        color: white;    
+    }
+    .proyectos{
+        max-width: 100%;    
+    }
+    .proyecto-flex{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .aplicaciones{
+        right: 550px;
+    }
+    .contactoapps{
+        display: flex;
+        flex-direction: column;
+    }
+    .transition{
+        max-width: 350px;
+    }
+    #logofooter{
+        display: flex;
+        justify-content: center;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 650px){
+    .nav li a{
+        font-size: 15px ;
+    }
+    .imagenpersonal img{
+        width: 100%;
+    }
+    .transition{
+        max-width: 200px;
+        }
+    .transition img{
+        max-width: 100%;
+    }
+    .parrafos p{
+        text-align: left;
+        font-size: 15px;
+    }
+    .nav{
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        background-color: #1d1d1d;
+        width: 25%;
+        top: 150px;
+        padding: 80px;
+        height: calc(100% - 150px);
+        overflow-y: auto;
+
+        transition: all 0.4s;
+        right: 100%;
+    }
+    
+    .nav.visible{
+        right: 0;
+        display: block;
+    }
+    li{
+        border-bottom: 1px solid white;
+    }
+}
